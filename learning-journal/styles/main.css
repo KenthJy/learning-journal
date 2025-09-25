@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+:root {
+  --bg-color: #0a0a23;
+  --header-clr: rgba(245, 245, 245, 0.691);
+
+  --inter-ftyle: 'Inter', sans-serif;
+  --nunito-ftyle: 'Nunito', sans-serif;
+  --jetbrains-ftyle: 'JetBrains Mono', monospace;
+
+  --text-light: #f5f5f5;
+  --text-dark: #0a0a23;
+}
+
+*, *::after, *::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-light);
+  font-family: var(--inter-ftyle);
+  line-height: 1.2;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: var(--header-clr);
+  font-family: var(--nunito-ftyle);
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.navbar a {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--text-dark);
+  transition: color 0.2s ease, border-bottom 0.2s ease;
+}
+
+.navbar a:hover {
+  color: #111;
+  border-bottom: 2px solid #111;
+}
+
+.navbar a.active {
+  color: #b45309; /* golden brown highlight */
+  border-bottom: 2px solid #b45309;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.logo svg {
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+}
+
+
+code, pre {
+  font-family: var(--jetbrains-ftyle);
+  background: #1a1a3a;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  color: #d1d5db;
+}
